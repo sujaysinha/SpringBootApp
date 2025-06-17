@@ -8,7 +8,7 @@ import java.util.List;
 
 public class CsvParser {
     public static void main(String[] args) throws IOException {
-        File inputFile = new File("Player.csv"); // Replace with your CSV file
+        File inputFile = new File("C:\\Users\\sujay\\IdeaProjects\\SpringBootApp\\demo\\src\\main\\resources\\Player.csv"); // Replace with your CSV file
         List<Player> people = parseCsvToPojo(inputFile, Player.class);
         people.forEach(System.out::println);
     }
