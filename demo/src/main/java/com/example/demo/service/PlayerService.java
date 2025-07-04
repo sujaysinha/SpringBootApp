@@ -6,12 +6,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component("PlayerService")
 public class PlayerService {
     @Autowired
     PlayerRepository playerRepository;
-    public String findAll()
+    public List<Player> findAll()
     {
-        return playerRepository.getById("id").toString();
+        return playerRepository.getAllPlayers();
+    }
+
+    public Player findByID(String playerID)
+    {
+        return playerRepository.getById(playerID);
     }
 }
